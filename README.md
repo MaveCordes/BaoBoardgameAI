@@ -19,18 +19,18 @@ If you decided to play against the AI you can choose the difficulty
     (3) hard 
     (4) impossible: 
 
-The game is easily explained. Every Player has two rowes filled with stones. To win the game you have to win all stones from your opponent from the row facing the middle of the board. (Opponent second row)
-Your moves can only start from your first row if you have more than on stone in your field. If you only have 0 or 1 stones in every field of the last row you lose. 
-After choosing a starting position (1-8) you can choose in wich direction you want to distibute your stones (clockwise or counterclockwise).
+The game is easily explained. Every Player has two rowes filled with stones. To win the game you have to take all stones from your opponents second row, the row facing the middle of the board. (opponent second row)
+Your move can only start from your first row if you have more than on stone in the starting position. If you only have 0 or 1 stones in every field of your first row you lose. 
+After choosing a starting position (1-8) you can choose in wich direction you want to distibute your stones (clockwise or counterclockwise; |1| or |2| ).
 P1 and P2 indicate the total stones of each player on the board.
     
     1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 
     —————————————————————————————— 
-    2   2   2   2   2   2   2   2           <- Opponent first row
-    2   2   2   2   2   2   2   2  P2 32    <- Opponent second row
+    2   2   2   2   2   2   2   2           <- opponent first row
+    2   2   2   2   2   2   2   2  P2 32    <- opponent second row
     ‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑ 
-    2   2   2   2   2   2   2   2           <- Your second row
-    2   2   2   2   2   2   2   2  P1 32    <- Your first row
+    2   2   2   2   2   2   2   2           <- your second row
+    2   2   2   2   2   2   2   2  P1 32    <- your first row
     —————————————————————————————— 
     ⟽  |1|   direction   |2|  ⟾   
 
@@ -43,10 +43,10 @@ P1 and P2 indicate the total stones of each player on the board.
     What direction do you want to go : 
 
 Take all the stones from your chosen starting postion and start to drop one stone into each following field one by one. If the last stone from your hand is put into a field containing one or more stones, pick all stones from that field and continue the move
-in the originally chosen direction. A special condition: if your last stone is put into a field in the row of the inner circle, you are allowed to take all the stones from your opponent.
-Your move ends if the last stone of your hand hits an empty field on your playboard.
+in the originally chosen direction. A special condition: if your last stone is put on a position on your second row, you are allowed to take all the stones from your opponents second row wich is facing your second row.
+Your move ends if the last stone of your hand hits an empty position on your playboard.
 
-e.g. if you decide to make to move [1,1] (first position, clockwise), the next two moves would look like this:
+e.g. if you decide to make the move [1,1] (first position, clockwise), the next two moves should look like this:
 
     Stones in Hand: 1
     —————————————————————————————— 
@@ -54,23 +54,23 @@ e.g. if you decide to make to move [1,1] (first position, clockwise), the next t
     2   2   2   2   2   2   2   2  P2 32 
     ‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑ 
     3   2   2   2   2   2   2   2
-    0   2   2   2   2   2   2   2  P1 31  <- position 1 is empty, one stone is put into position 1 of the inner row adding up to 3.
+    0   2   2   2   2   2   2   2  P1 31  <- position 1 was taken empty, one stone is put into position 1 of the second row
     —————————————————————————————— 
 
-after you put your next stone into position 2 of the inner row, you will take all your stones and the stones from your opponent
+after you put your next stone into position 2 of the second row, you will take all your stones and the stones from your opponents position
 
     Stones in Hand: 5
     —————————————————————————————— 
     2   2   2   2   2   2   2   2
-    2   0   2   2   2   2   2   2  P2 30 
+    2   0   2   2   2   2   2   2  P2 30  <- take your opponents stones
     ‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑ 
     3   0   2   2   2   2   2   2
     0   2   2   2   2   2   2   2  P1 29 
     —————————————————————————————— 
 
-your turn will continue until you put your last stone into an empty field. After that its the opponents turn.
+your turn will continue until you put your last stone into an empty position. After that its the opponents turn.
 
-as possible ending-board would look like this:
+A possible ending-board would look like this:
 
     1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 
     —————————————————————————————— 
