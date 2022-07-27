@@ -1,6 +1,6 @@
 BaoeasyAI
 ---------
-Simple boardgame called BAO implemented in easyAI provided by Zylko (zulko.github.io/easyai/)
+Simple boardgame called BAO implemented in easyAI provided by Zulko_ (zulko.github.io/easyai/)
 Play against another player or the AI
 
 How to play
@@ -13,7 +13,7 @@ Start by selecting if you want to play against a Human Player or the AI.
 
 If you decided to play against the AI you can choose the difficulty
 
-    Please choose the difficulty? 
+    Please choose the difficulty
     (1) easy 
     (2) medium 
     (3) hard 

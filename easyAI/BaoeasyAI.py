@@ -156,7 +156,7 @@ class ask:
                     while True:
                         try:
                             diffint = int(input(
-                                '\n'"Please choose the difficulty? \n(1) easy \n(2) medium \n(3) hard \n(4) impossible: "))
+                                '\n'"Please choose the difficulty \n(1) easy \n(2) medium \n(3) hard \n(4) impossible: "))
                         except ValueError:
                             print(
                                 "Please choose the difficulty, type '1' for easy, '2' for medium, '3' for hard, '4' for impossible")
