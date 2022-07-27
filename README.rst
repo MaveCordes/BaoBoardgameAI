@@ -24,15 +24,15 @@ Your moves can only start from your first row if you have more than on stone in 
 After choosing a starting position (1-8) you can choose in wich direction you want to distibute your stones (clockwise or counterclockwise).
 P1 and P2 indicate the total stones of each player on the board.
     
-    1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 
-    —————————————————————————————— 
-    2   2   2   2   2   2   2   2           <- Opponent first row
-    2   2   2   2   2   2   2   2  P2 32    <- Opponent second row
-    ‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑ 
-    2   2   2   2   2   2   2   2           <- Your second row
-    2   2   2   2   2   2   2   2  P1 32    <- Your first row
-    —————————————————————————————— 
-    ⟽  |1|   direction   |2|  ⟾   
+1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 
+—————————————————————————————— 
+2   2   2   2   2   2   2   2           <- Opponent first row
+2   2   2   2   2   2   2   2  P2 32    <- Opponent second row
+‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑ 
+2   2   2   2   2   2   2   2           <- Your second row
+2   2   2   2   2   2   2   2  P1 32    <- Your first row
+—————————————————————————————— 
+⟽  |1|   direction   |2|  ⟾   
 
 
     Possible moves : 
