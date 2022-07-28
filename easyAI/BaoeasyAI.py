@@ -1,6 +1,7 @@
 import baofunctions as bck
 from copy import deepcopy
 import numpy as np
+import random
 
 class TwoPlayerGame:
 
@@ -88,6 +89,7 @@ class Bao(TwoPlayerGame):
 
         p1 = (sum(self.playboard[2] + self.playboard[3]))
         p2 = (sum(self.playboard[0] + self.playboard[1]))
+    
 
         print('\n', ' | '.join(map(str, range(1, 9))), '\n', 30 * '—',
               '\n' + '\n'.join(['  '.join(['{:2}'.format(item) for item in row])
@@ -111,17 +113,21 @@ class Bao(TwoPlayerGame):
     def is_over(self):
         return self.win() or self.lose()
 
-    def scoring(self):      
-        if self.current_player == 1 :
-            value = sum(self.playboard[2] + self.playboard[3]) - sum(self.playboard[0] + self.playboard[1])
-            return value
-        if self.current_player == 2 : 
-            value = sum(self.playboard[0] + self.playboard[1]) - sum(self.playboard[2] + self.playboard[3])
-            return value
-        if self.win():
-            return 100
-        if self.lose():
-            return -100   
+    def scoring(self):   
+        if rnd == False :   
+            if self.current_player == 1 :
+                value = sum(self.playboard[2] + self.playboard[3]) - sum(self.playboard[0] + self.playboard[1])
+                return value
+            if self.current_player == 2 : 
+                value = sum(self.playboard[0] + self.playboard[1]) - sum(self.playboard[2] + self.playboard[3])
+                return value
+            if self.win():
+                return 100
+            if self.lose():
+                return -100   
+        if rnd == True:
+            rnd_num = random.randrange(-100, 100, 1)
+            return rnd_num
 
     def playertoy(self):
         if self.current_player == 1:
@@ -134,7 +140,8 @@ class Bao(TwoPlayerGame):
 class ask:
 
     def ask(self):
-        global varplayer, easy, AI_calc
+        global varplayer, easy, rnd
+        rnd = False
         while True:
             try:
                 player = int(input(
@@ -145,8 +152,7 @@ class ask:
             if 0 < player < 3:
                 if player == 1:
                     varplayer = Human_Player()
-                    AI_calc = False
-                    return varplayer, AI_calc
+                    return varplayer
                 if player == 2:
                     while True:
                         try:
@@ -159,23 +165,23 @@ class ask:
                         if 0 < diffint < 5:
                             if diffint == 1:
                                 difficult = SSS(1)
+                                rnd = True
                                 easy = 1
                                 print("You chose easy")
                             if diffint == 2:
-                                difficult = SSS(2, Bao.scoring)
+                                difficult = SSS(1)
                                 easy = 2
                                 print("You chose medium")
                             if diffint == 3:
-                                difficult = Negamax(2, Bao.scoring)
+                                difficult = Negamax(2)
                                 easy = 3
                                 print("You chose hard")
                             if diffint == 4:
-                                difficult = Negamax(3, Bao.scoring)
+                                difficult = Negamax(3)
                                 easy = 3
                                 print("You chose impossible")
                             varplayer = AI_Player(difficult)
-                            AI_calc = True
-                            return varplayer, easy, AI_calc
+                            return varplayer, easy, rnd
 
 
 if __name__ == "__main__":
