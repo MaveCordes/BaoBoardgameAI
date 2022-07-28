@@ -63,20 +63,11 @@ class SSS:
             self.scoring if self.scoring else (lambda g: g.scoring())
         )  # horrible hack
         
-        print("scoring")
-        print(scoring)
-
         first = self.win_score  # essence of SSS algorithm
-
-        print("first")
-        print(first)
         
         def next(lowerbound, upperbound, best_value):
             return best_value
 
-        self.alpha = mtd(game, first, next, self.depth, scoring, self.tt)
-        
-        print("alpha")
-        print(self.alpha)
+        self.alpha = mtd(game, first, next, self.depth, scoring, self.tt)      
         
         return game.ai_move
