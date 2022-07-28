@@ -89,6 +89,12 @@ I lost against the AI! Enjoy playing!
 
 Installation
 ------------
+
+If you dont have a virtual python env running create one and activate it
+
+    python3 -m venv .easyAI
+    source .easyAI/bin/activate
+
 Download this rep and in terminal type
     
     sudo python setup.py install
