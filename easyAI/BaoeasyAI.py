@@ -185,7 +185,7 @@ class ask:
 
 if __name__ == "__main__":
     
-    from easyAI.AI import Negamax, SSS
+    from AI import Negamax, SSS
     from Player import Human_Player, AI_Player
     
     ask.ask(self=None)    
