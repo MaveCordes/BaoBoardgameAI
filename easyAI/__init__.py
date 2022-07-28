@@ -14,7 +14,7 @@ __all__ = [
 from .Player import Human_Player, AI_Player
 from .BaoeasyAI import Bao, ask, TwoPlayerGame
 from .baofunctions import game
-from easyAI.AI import (
+from AI import (
     Negamax,
     TranspositionTable,
     mtd,
