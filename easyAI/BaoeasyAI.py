@@ -16,14 +16,9 @@ class TwoPlayerGame:
             if self.is_over():
                 break
 
-            if AI_calc == True and self.current_player == 2 :
-                move = self.player.ask_move(self)
-                history.append((deepcopy(self), move))
-                self.make_move_AI(move)
-            if AI_calc == False or self.current_player == 1 :
-                move = self.player.ask_move(self)
-                history.append((deepcopy(self), move))
-                self.make_move_AI(move)
+            move = self.player.ask_move(self)
+            history.append((deepcopy(self), move))
+            self.make_move(move)
 
             if verbose:
                 print("\nMove #%d: player %d plays %s :" % (
@@ -70,11 +65,11 @@ class Bao(TwoPlayerGame):
 
     def make_move(self, move):
         #true the bottom "baoprint" variable to print all moves instead of only the endboard
-        baoprint = False
+        baoprint = True
         bck.game.calculation(self, self.playertoy(), move[0] - 1, move[1], self.playboard, baoprint)
         
     def make_move_AI(self, move):
-        baoprint = True
+        baoprint = False
         bck.game.calculation(self, self.playertoy(), move[0] - 1, move[1], self.playboard, baoprint)
         
     def show(self):
