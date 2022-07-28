@@ -1,6 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/Science/Documents/VSCode/Python/easyAI'
-make: Leaving directory `/Users/Science/Documents/VSCode/Python/easyAI'
- 
-make: *** No targets specified and no makefile found.  Stop.
-
