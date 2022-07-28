@@ -1,6 +1,6 @@
 # contributed by mrfesol (Tomasz Wesolowski)
 
-from MTdriver import mtd
+from .MTdriver import mtd
 
 
 class SSS:
