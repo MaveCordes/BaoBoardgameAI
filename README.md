@@ -96,7 +96,6 @@ Download this rep and in terminal type
 numpy and time lib for manual install required
 
     pip install numpy
-    pip install time
 
 
 Credits
